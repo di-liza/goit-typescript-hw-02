@@ -1,6 +1,11 @@
-let some:unknown;
-some = 'Text';
+let some: unknown;
+some = "Text";
 let str: string;
-str = some;
+
+// Перед присвоєнням потрібно зробити перевірку типів
+if (typeof some === "string") {
+  // Після перевірки проводимо операцію по приведенню типів
+  str = some as string;
+}
 
 export {};
